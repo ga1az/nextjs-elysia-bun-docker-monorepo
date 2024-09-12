@@ -1,0 +1,22 @@
+{
+  "name": "mono",
+  "private": "true",
+  "type": "module",
+  "packageManager": "bun@1.1.26",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:server": "turbo dev --filter=@mono/server",
+    "dev:web": "turbo dev --filter=@mono/web",
+    "docker:web": "docker build -t mono-web -f ./apps/web/Dockerfile .",
+    "docker:server": "docker build -t mono-server -f ./apps/server/Dockerfile .",
+    "docker:compose": "docker-compose up"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

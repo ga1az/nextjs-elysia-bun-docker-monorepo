@@ -1,0 +1,11 @@
+{
+  "name": "@mono/api",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@mono/server": "workspace:*"
+  },
+  "dependencies": {
+    "@elysiajs/eden": "^1.1.3"
+  }
+}
